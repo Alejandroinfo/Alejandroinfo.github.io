@@ -12,8 +12,8 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Blown Away: The Rise and Fall of Businesses in the Windy City by Codeconomics](/blown_away)
+<img src="images/blown_away_thumbnail.png?raw=true"/>
 
 ---
 
