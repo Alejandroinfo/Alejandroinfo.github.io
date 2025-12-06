@@ -35,7 +35,7 @@ The work acomplishes to illustrate that:
  - Countries play different roles in this system. Some are net borrowers or lenders, often wealthier countries remain key suppliers of capital, while many developing countries are net recipients.
  - Managing global financial risks requires diversification. When banks or governments depend too heavily on the same few countries for funding, they become more vulnerable to global shocks. A handful of financial centers — the US, UK, and Germany — act as central hubs in this network, making them both sources of stability and potential channels for contagion.
 
- ![](static-viz/cross_border_finance_info.svg)
+ ![](images/cross_border_finance_info.svg)
 
 
 
