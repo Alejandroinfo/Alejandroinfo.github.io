@@ -9,7 +9,7 @@
 
 ---
 [Crime in Chicago](/crime.md)
-<img src="images/final_pdf?raw=true"/>
+<img src="images/final_pdf.jpg"/>
 ---
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
