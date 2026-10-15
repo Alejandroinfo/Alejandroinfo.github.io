@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alejandro Armas | Data Scientist & Economist</title>
+<meta name="description" content="Portfolio of Alejandro Armas Braithwaite: data scientist and economist (M.S. Computational Analysis and Public Policy, University of Chicago) working on machine learning, spatial analysis and public policy.">
+<meta property="og:title" content="Alejandro Armas | Data Scientist & Economist">
+<meta property="og:description" content="Machine learning, spatial analysis and public policy. M.S. CAPP, University of Chicago.">
+<meta property="og:image" content="https://alejandroinfo.github.io/images/livability.jpg">
+<meta property="og:url" content="https://alejandroinfo.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --ink:#18201c; --muted:#5b655f; --line:#e2e0d8;
+  --accent:#1f5c43; --accent-soft:#e3efe8; --chip:#efeee8;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#121614; --surface:#1a201d; --ink:#e9ece9; --muted:#9aa49e; --line:#2b332f;
+        --accent:#7cc4a0; --accent-soft:#1f3329; --chip:#232a26;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav .name{font-family:Fraunces,serif;font-weight:650;text-decoration:none;color:var(--ink)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:500}
+nav ul a:hover{color:var(--ink)}
+@media (max-width:640px){nav ul{display:none}}
+
+header.hero{padding:72px 0 48px}
+.hero-grid{display:grid;grid-template-columns:1fr 200px;gap:48px;align-items:center}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 12px}
+h1{font-family:Fraunces,serif;font-weight:650;font-size:clamp(34px,5vw,52px);line-height:1.08;margin:0 0 20px;letter-spacing:-.01em}
+.lede{font-size:18px;color:var(--muted);max-width:620px;margin:0 0 28px}
+.photo{width:200px;height:200px;border-radius:50%;object-fit:cover;border:4px solid var(--surface);box-shadow:0 0 0 1px var(--line)}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+@media (max-width:720px){.hero-grid{grid-template-columns:1fr}.photo{width:120px;height:120px;order:-1}header.hero{padding-top:40px}}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:72px}
+.stat{background:var(--surface);padding:20px}
+.stat b{display:block;font-family:Fraunces,serif;font-size:28px;font-weight:650;color:var(--accent);line-height:1.1}
+.stat span{font-size:13px;color:var(--muted)}
+@media (max-width:720px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+section{padding-bottom:72px}
+h2{font-family:Fraunces,serif;font-weight:650;font-size:30px;margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 28px}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media (max-width:760px){.projects{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card .media{aspect-ratio:16/9;background:var(--chip);overflow:hidden;border-bottom:1px solid var(--line)}
+.card .media img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
+.card .media.metric{display:flex;flex-direction:column;justify-content:center;padding:28px;background:var(--accent-soft)}
+.metric b{font-family:Fraunces,serif;font-size:48px;line-height:1;color:var(--accent)}
+.metric span{color:var(--muted);font-size:14px;margin-top:8px;max-width:340px}
+.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.meta{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:6px}
+.card h3{margin:0 0 8px;font-size:19px;line-height:1.3}
+.card p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.card ul{margin:0 0 14px;padding-left:18px;font-size:14.5px}
+.card li{margin-bottom:4px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.tag{font-size:12px;background:var(--chip);border-radius:999px;padding:3px 10px;color:var(--muted)}
+.links{margin-top:auto;display:flex;gap:16px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.links a{text-decoration:none}
+.links a:hover{text-decoration:underline}
+.links .note{color:var(--muted);font-weight:500}
+
+.timeline{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 26px 26px}
+.job:before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.job h3{margin:0;font-size:17px}
+.job .org{color:var(--muted);font-size:15px}
+.job .when{font-size:13px;color:var(--muted)}
+.job p{margin:6px 0 0;font-size:15px}
+
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:760px){.skills{grid-template-columns:1fr}}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.skill h3{margin:0 0 10px;font-size:15px}
+.side{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media (max-width:760px){.side{grid-template-columns:1fr}}
+.side a{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;text-decoration:none;color:var(--ink)}
+.side a:hover{border-color:var(--accent)}
+.side small{color:var(--muted);display:block;margin-top:4px;font-size:14px}
+
+footer{border-top:1px solid var(--line);padding:40px 0 60px;color:var(--muted);font-size:14px}
+footer h2{color:var(--ink)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="name" href="#">Alejandro Armas</a>
+  <ul><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></nav>
+
+<div class="wrap">
+<header class="hero">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">Data Scientist · Economist</p>
+      <h1>Turning messy public data into decisions.</h1>
+      <p class="lede">I'm an economist with an M.S. in Computational Analysis and Public Policy from the University of Chicago. I build machine-learning models, spatial analyses and data pipelines, and I've spent 10 years teaching econometrics. Previous work includes Peru's Ministry of Culture and Ministry of Foreign Trade and Tourism, and a costing model for the International Organization for Migration (IOM).</p>
+      <div class="btns">
+        <a class="btn primary" href="cv/Alejandro_Armas_CV_Data.pdf">Resume · Data</a>
+        <a class="btn" href="cv/Alejandro_Armas_CV_Research.pdf">Resume · Research</a>
+        <a class="btn" href="https://www.linkedin.com/in/alejandroarmasbr/">LinkedIn</a>
+        <a class="btn" href="https://github.com/Alejandroinfo">GitHub</a>
+      </div>
+    </div>
+    <img class="photo" src="images/profile.jpg" alt="Portrait of Alejandro Armas">
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><b>~US$395M</b><span>annual investment estimated in a cost model for IOM</span></div>
+  <div class="stat"><b>~60K</b><span>news articles and images collected for political-bias research</span></div>
+  <div class="stat"><b>257K</b><span>crime records mapped to Chicago ZIP codes</span></div>
+  <div class="stat"><b>10 yrs</b><span>teaching economics and econometrics</span></div>
+</div>
+
+<section id="projects">
+  <h2>Selected projects</h2>
+  <p class="sub">Machine learning, geospatial analysis, interactive visualization and policy modeling.</p>
+  <div class="projects">
+
+    <article class="card">
+      <div class="media"><img src="images/livability.jpg" alt="Choropleth map of Chicago ZIP codes colored by livability score" loading="lazy"></div>
+      <div class="body">
+        <div class="meta">University of Chicago · Winter 2025 · Team of 4</div>
+        <h3>Chicago Livability Score</h3>
+        <p>An interactive map that ranks 60 Chicago ZIP codes on a weighted index of housing cost, economy, crime, education and environment.</p>
+        <ul>
+          <li>Built the crime, school and environment indices from 257K crime records, 94K environmental complaints and 650 public schools.</li>
+          <li>Matched point-level records to ZIP codes with spatial joins on Census shapefiles, and wrote unit tests for the pipeline.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">GeoPandas</span><span class="tag">Shapely</span><span class="tag">Flask</span><span class="tag">Folium</span><span class="tag">pytest</span></div>
+        <div class="links"><a href="https://github.com/uchicago-2025-capp30122/30122-project-fantasticfour">Code →</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media metric"><b>0.59 F1</b><span>Tuned random forest vs. 0.36 for a random baseline and 0.49 for logistic regression</span></div>
+      <div class="body">
+        <div class="meta">University of Chicago · Spring 2025</div>
+        <h3>Predicting Dangerous Streets with ML</h3>
+        <p>A classifier that flags high-risk New York City street segments from crash records and street-infrastructure data.</p>
+        <ul>
+          <li>Compared logistic regression, decision trees, random forests and a neural network (MLP), using SMOTE to handle class imbalance.</li>
+          <li>Non-linear models captured interactions between lane count, speed limits and traffic calming that linear models missed.</li>
+        </ul>
+        <div class="tags"><span class="tag">scikit-learn</span><span class="tag">Random Forest</span><span class="tag">MLP</span><span class="tag">SMOTE</span><span class="tag">Feature engineering</span></div>
+        <div class="links"><span class="note">Course repository is private; code available on request.</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><img src="images/boardgame.jpg" alt="Board game explorer interface showing a selected game and similar games" loading="lazy"></div>
+      <div class="body">
+        <div class="meta">Interactive visualization · Dec 2025</div>
+        <h3>Board Game Similarity Explorer</h3>
+        <p>A recommender and exploration tool for 21,000+ board games, built on cosine similarity over mechanics, themes, ratings and descriptions.</p>
+        <ul>
+          <li>Interactive force-directed graph: pick a game to see its closest neighbors and how they compare.</li>
+          <li>Filters for rating, player count, playtime, designer and mechanics.</li>
+        </ul>
+        <div class="tags"><span class="tag">D3.js</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Cosine similarity</span></div>
+        <div class="links"><a href="https://boardgame-explorer.b-cdn.net/">Live demo →</a><a href="https://github.com/Alejandroinfo/Interactive-Project">Code →</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media"><img src="images/crime.jpg" alt="Heatmap of Chicago crime counts by hour of day and day of week" loading="lazy"></div>
+      <div class="body">
+        <div class="meta">Data visualization · Fall 2025</div>
+        <h3>A Closer Look at Crime in Chicago</h3>
+        <p>A visual analysis of 259K crime records from 2024 that shows which crimes happen, when and where across Chicago's community areas.</p>
+        <ul>
+          <li>Heatmaps by hour and day, seasonal trends, arrest rates and spatial density maps.</li>
+        </ul>
+        <div class="tags"><span class="tag">Altair</span><span class="tag">pandas</span><span class="tag">GeoPandas</span><span class="tag">Vega-Lite</span></div>
+        <div class="links"><a href="images/chicago_crime_report.pdf">Report (PDF) →</a><a href="https://github.com/Alejandroinfo/DataVis">Code →</a></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media metric"><b>~US$395M</b><span>Estimated annual investment for inclusive disaster preparedness across Colombia, Chile, Peru, Ecuador and Bolivia</span></div>
+      <div class="body">
+        <div class="meta">Harris Policy Lab · Client: IOM · Fall 2025</div>
+        <h3>Costing Inclusive Disaster Risk Management</h3>
+        <p>A standardized, Sendai-aligned cost model for gender- and migration-inclusive disaster risk management in five South American countries.</p>
+        <ul>
+          <li>Adjusted GDP-based benchmarks with four normalized IDB governance and vulnerability indices.</li>
+          <li>Allocated costs across five policy dimensions and validated the findings with IOM and UN country offices.</li>
+        </ul>
+        <div class="tags"><span class="tag">Cost modeling</span><span class="tag">Index construction</span><span class="tag">Policy analysis</span></div>
+        <div class="links"><span class="note">Client deliverable, not public.</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media metric"><b>~60K</b><span>News articles and images (about 10K per outlet) from 6 media outlets</span></div>
+      <div class="body">
+        <div class="meta">Research project · Summer 2025</div>
+        <h3>Detecting Political Ideology in News Media</h3>
+        <p>Built a multimodal (text and image) dataset with a faculty researcher, to be used for classifying political bias with NLP and computer vision.</p>
+        <ul>
+          <li>Collected data from APIs and the web with Selenium and Requests, then cleaned and structured it for modeling.</li>
+        </ul>
+        <div class="tags"><span class="tag">Web scraping</span><span class="tag">APIs</span><span class="tag">Selenium</span><span class="tag">NLP data</span></div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <p class="sub">Public policy, government and teaching.</p>
+  <div class="timeline">
+    <div class="job"><h3>Policy Lab Consultant</h3><div class="org">University of Chicago, Harris Policy Labs · Client: IOM</div><div class="when">Aug 2025 – Dec 2025 · Chicago, IL</div><p>Co-developed a cost model for inclusive disaster risk management in five South American countries.</p></div>
+    <div class="job"><h3>Teaching Assistant, Machine Learning for Public Policy</h3><div class="org">University of Chicago, Harris School of Public Policy</div><div class="when">Aug 2025 – Dec 2025 · Chicago, IL</div><p>Led TA sessions, held office hours and graded work for about 30 graduate students. Wrote reproducible Python ML materials.</p></div>
+    <div class="job"><h3>Lecturer &amp; Teaching Assistant</h3><div class="org">Universidad del Pacífico, Faculty of Economics and Finance</div><div class="when">Mar 2014 – Jul 2024 · Lima, Peru</div><p>Taught applied economics and econometrics for 10 years: 3 as a lecturer and 7 as a TA.</p></div>
+    <div class="job"><h3>Public Investment Formulation Assistant</h3><div class="org">Ministry of Foreign Trade and Tourism (Peru), COPESCO</div><div class="when">Nov 2023 – Apr 2024 · Lima, Peru</div><p>Evaluated 10+ public tourism infrastructure projects under Invierte.pe, Peru's public investment system.</p></div>
+    <div class="job"><h3>Consultant, Economics Studies Unit</h3><div class="org">Ministry of Culture (Peru)</div><div class="when">Oct 2020 – Feb 2021 · Lima, Peru</div><p>Combined 5 quantitative data sources into an Excel dashboard used for budget and policy analysis.</p></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">M.S. Computational Analysis &amp; Public Policy, University of Chicago (GPA 3.59) · M.A. Economics · B.A. Economics, Universidad del Pacífico</p>
+  <div class="skills">
+    <div class="skill"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">R</span><span class="tag">Stata</span><span class="tag">JavaScript / D3</span><span class="tag">Git</span></div></div>
+    <div class="skill"><h3>Libraries &amp; tools</h3><div class="tags"><span class="tag">pandas</span><span class="tag">scikit-learn</span><span class="tag">GeoPandas</span><span class="tag">Shapely</span><span class="tag">Altair</span><span class="tag">Selenium</span><span class="tag">Flask</span><span class="tag">pytest</span><span class="tag">Excel / VBA</span></div></div>
+    <div class="skill"><h3>Methods</h3><div class="tags"><span class="tag">Machine learning</span><span class="tag">Econometrics</span><span class="tag">Spatial analysis</span><span class="tag">Index construction</span><span class="tag">Web scraping</span><span class="tag">Data visualization</span></div></div>
+  </div>
+</section>
+
+<section id="side">
+  <h2>Side projects</h2>
+  <p class="sub">Things I build for fun.</p>
+  <div class="side">
+    <a href="https://github.com/Alejandroinfo/simulation"><b>Town Simulation: The Envoy</b><small>An agent-based simulation in Python with 150 citizens, competing factions and a 7-resource economy, plus a live dashboard.</small></a>
+    <a href="https://github.com/Alejandroinfo/lobby"><b>Game Lobby</b><small>A real-time multiplayer lobby built with React, TypeScript and Firebase, deployed on Vercel.</small></a>
+  </div>
+</section>
+</div>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p>I'm looking for data science, data analytics and research roles. I'm open to relocating and to remote work.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:alarmasb@uchicago.edu">alarmasb@uchicago.edu</a>
+    <a class="btn" href="https://www.linkedin.com/in/alejandroarmasbr/">LinkedIn</a>
+    <a class="btn" href="https://github.com/Alejandroinfo">GitHub</a>
+  </div>
+  <p style="margin-top:32px">© 2026 Alejandro Armas Braithwaite</p>
+</div></footer>
+</body>
+</html>
